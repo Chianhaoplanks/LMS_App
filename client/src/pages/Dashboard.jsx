@@ -13,8 +13,6 @@ export default function Dashboard() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    console.log("User State");
-    console.log(userState);
     if (!userState) {
       navigate('/');
       return;

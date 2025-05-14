@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom';
 import { login } from '../services/api';
 import { useAuth } from '../context/AuthContext';
 
-//cl33c4ug
 export default function Login() {
   const [loginId, setLoginId] = useState('');
   const [error, setError] = useState('');

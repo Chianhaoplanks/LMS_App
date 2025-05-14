@@ -2,16 +2,6 @@ const express = require('express');
 const router = express.Router();
 const db = require('../database/db');
 
-router.get('/', (req, res) => {
-    db.all(
-        `SELECT * FROM Entries WHERE entry_state = 'active'`,
-        (err, rows) => {
-            if (err) return res.status(500).json({ error: err.message });
-            res.json(rows);
-        }
-    );
-});
-
 router.post('/', async (req, res) => {
     try {
         const { topic_id, entry_parent_id, entry_content, entry_posted_by_user_id } = req.body;

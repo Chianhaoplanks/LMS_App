@@ -45,8 +45,6 @@ export default function EntryItem({ entry, onReply }) {
                     </div>
                 )}
 
-                {console.log(entry)}
-
                 {entry.reply_count > 0 && (
                     <div>
                         <button
